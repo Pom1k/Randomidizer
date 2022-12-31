@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #eee;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: #555;
+        }
+        
+        .content {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Random Website</div>
+        <button id="button" class="button">Generate</button>
+        <div id="content" class="content"></div>
+    </div>
+    <script>
+        const button = document.getElementById('button');
+        const content = document.getElementById('content');
+
+        button.addEventListener('click', function() {
+            const randomNumber = Math.floor(Math.random() * 100);
+            content.innerHTML = `The random number is: ${randomNumber}`;
+        });
+    </script>
+</body>
+
+</html>
